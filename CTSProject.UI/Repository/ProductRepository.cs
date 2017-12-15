@@ -1,4 +1,5 @@
-﻿using CTSProject.Data.Model.ToDb;
+﻿using CTSProject.Data;
+using CTSProject.Data.Model.ToDb;
 using CTSProject.Data.Model.ToShop;
 using CTSProject.UI.Interfaces;
 using System;
@@ -11,6 +12,11 @@ namespace CTSProject.UI.Repository
 {
     class ProductRepository : Repository<ProductToDb>, IProductRepository<ProductToDb, ProductToShop>
     {
+        public ProductRepository(OnlineShopContext context)
+        {
+            _context = context;
+        }
+
         public IEnumerable<ProductToShop> ReadAPI()
         {
             throw new NotImplementedException();
