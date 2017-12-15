@@ -23,6 +23,42 @@ namespace CTSProject.GUI
         public MainWindow()
         {
             InitializeComponent();
+        
+            //Преобразовать название категорий, чтобы выводить их в лист
+            //Categories.ItemSourse = Имя Листа С Категориями, где названия в графе Name
         }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            Login LoginWindow = new Login();
+            LoginWindow.Show();
+            LoginWindow.Owner = this;
+            IsHitTestVisible = false;
+        }
+
+        private void Cart_Click(object sender, RoutedEventArgs e)
+        {
+            bool opened = false;
+            if (OwnedWindows != null)
+            {
+                foreach (Window window in OwnedWindows)
+                {
+                    if (window is Cart)
+                        opened = true;
+                }
+            }
+            if (!opened)
+            {
+                Cart CartWindow = new Cart();
+                CartWindow.Owner = this;
+                CartWindow.Show();
+            }
+        }
+
+        private void Category_Selected(object sender, RoutedEventArgs e)
+        {
+            //Category Selection
+        }
+        
     }
 }
