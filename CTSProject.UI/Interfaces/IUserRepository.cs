@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CTSProject.UI
+namespace CTSProject.UI.Interfaces
 {
-    public class Class1
+    public interface IUserRepository<T>: IRepository<T>
     {
     }
 }

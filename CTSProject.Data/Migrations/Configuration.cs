@@ -5,14 +5,14 @@ namespace CTSProject.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CTSProject.Data.Context>
+    internal sealed class Configuration : DbMigrationsConfiguration<CTSProject.Data.OnlineShopContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(CTSProject.Data.Context context)
+        protected override void Seed(CTSProject.Data.OnlineShopContext context)
         {
             //  This method will be called after migrating to the latest version.
 

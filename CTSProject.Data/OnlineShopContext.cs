@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace CTSProject.Data
 {
-    class Context: DbContext
+    public class OnlineShopContext: DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<ProductToDb> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
 
-        public Context()
+        public OnlineShopContext()
             : base("OnlineShopDataBase")
         {
             Database.SetInitializer(
-              new DropCreateDatabaseIfModelChanges<Context>());
+              new DropCreateDatabaseIfModelChanges<OnlineShopContext>());
         }
     }
 }
