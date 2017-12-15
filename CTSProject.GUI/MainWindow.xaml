@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTSProject.GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="CTS" Height="600" Width="900" ResizeMode="NoResize" Loaded="MainWindow_Loaded" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <DataTemplate x:Key="ItemsTemplate">
+        <DockPanel Margin="5" >
+            <Image DockPanel.Dock="Left" Width="60" Height="60"/>
+            <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Name="Title" HorizontalAlignment="Left" />
+                <TextBlock Name="Price" HorizontalAlignment="Right" />
+            </StackPanel>
+        </DockPanel>
+    </DataTemplate>
+    </Window.Resources>
     <Grid>
-        
+        <DockPanel LastChildFill="True">
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                <TextBlock Margin="10">
+                    Здарова
+                </TextBlock>
+                <Button Margin="10" Click="Cart_Click">
+                    Корзина
+                </Button>
+            </StackPanel>
+            <StackPanel Width="180" DockPanel.Dock="Left">
+                <TextBlock Height="Auto" Margin="10">Категории</TextBlock>
+                <ListBox Name="Categories" Margin="10,0,10,10" DisplayMemberPath="Name" SelectionChanged="Category_Selected"></ListBox>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right">
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox Margin="10">Сортировка</ComboBox>
+                    <TextBox Margin="10">Поиск</TextBox>
+                </StackPanel>
+                <ListBox x:Name="Items" ItemTemplate="{StaticResource ItemsTemplate}" Margin="10,0,10,10" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </StackPanel>
+        </DockPanel>
     </Grid>
 </Window>
