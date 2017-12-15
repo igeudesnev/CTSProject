@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context.cs" />
+    <Compile Include="OnlineShopContext.cs" />
     <Compile Include="Migrations\201712111913550_Initial.cs" />
     <Compile Include="Migrations\201712111913550_Initial.Designer.cs">
       <DependentUpon>201712111913550_Initial.cs</DependentUpon>
