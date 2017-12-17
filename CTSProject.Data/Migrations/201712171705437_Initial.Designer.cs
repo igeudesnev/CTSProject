@@ -13,7 +13,7 @@ namespace CTSProject.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201712111913550_Initial"; }
+            get { return "201712171705437_Initial"; }
         }
         
         string IMigrationMetadata.Source
