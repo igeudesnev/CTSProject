@@ -21,7 +21,7 @@
                 </TextBlock>
             </Grid>
             <StackPanel CanVerticallyScroll="True" DockPanel.Dock="Top" Background="#f6e8db" Margin="0 10 0 10" VerticalAlignment="Center">
-                <ListBox Name="CartItems" Margin="10">a</ListBox>
+                <ListBox Name="CartItems" Margin="10">Тут ваши продукты</ListBox>
             </StackPanel>
             <Button Content="Заказать всё" DockPanel.Dock="Bottom" Click="OrderEverything" Background="#9e8767" VerticalAlignment="Bottom" Foreground="#d9be98" HorizontalAlignment="Right" Margin="0,10,0,0" Padding="10,2" FontSize="20" BorderThickness="0" />
             <Grid DockPanel.Dock="Bottom" Background="#f6e8db" Height="36" VerticalAlignment="Bottom">
@@ -31,7 +31,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Grid.Row="0" Foreground="#FF676A6F" TextAlignment="Right" VerticalAlignment="Center" Padding="0,0,10,0" FontSize="20" Text="Сумма: {0} рублей" />
+                <TextBlock Grid.Column="0" Grid.Row="0" Foreground="#FF676A6F" TextAlignment="Right" VerticalAlignment="Center" Padding="0,0,10,0" FontSize="20" Text="Сумма: 0 рублей" />
             </Grid>
         </DockPanel>
     </Grid>

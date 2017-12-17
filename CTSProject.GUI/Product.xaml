@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:CTSProject.GUI"
         mc:Ignorable="d"
         Icon="cart.ico"
-        Title="Product" Height="300" Width="450" ResizeMode="NoResize">
+        Title="Product" Height="300" Width="450" ResizeMode="NoResize" ScrollViewer.VerticalScrollBarVisibility="Auto">
     <Grid Background="#bfc7d2">
         <StackPanel>
-            <Grid Margin="10"  Background="#f6e8db">
+            <Grid Margin="10" Background="#f6e8db">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
@@ -17,16 +17,18 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Grid.Row="0" Margin="20" Source="cart.png" Height="70" Width="70" Stretch="Fill" ></Image>
+                <Image Grid.Column="0" Grid.Row="0" Margin="10" Source="book.png" Height="70" Width="70" Stretch="Fill" ></Image>
                 <StackPanel Grid.Column="1" Grid.Row="0" Margin="20" HorizontalAlignment="Right">
-                    <TextBlock>Название</TextBlock>
-                    <TextBlock HorizontalAlignment="Right">Цена</TextBlock>
+                    <TextBlock FontSize="20" FontWeight="Bold" Foreground="#FF676A6F">Супер-пупер штука </TextBlock>
+                    <TextBlock FontSize="10"></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="18" Foreground="#FF676A6F">Цена: 1 999 рублей</TextBlock>
                 </StackPanel>
             </Grid>
-            <TextBlock Background="#f6e8db" Margin="10,0,10,10" Padding="5">Rating</TextBlock>
-            <TextBlock Background="#f6e8db" Margin="10,0,10,10" Padding="5">Description</TextBlock>
-            <ListBox Background="#f6e8db" Margin="10,0,10,10" Padding="5" >Reviews</ListBox>
-            <Button Content="В корзину" Margin="10,0,10,10" Click="AddToCart"/>
+            <Button Content="В корзину" Margin="10,0,10,10" Click="AddToCart" Background="#d9be98" FontSize="16" Foreground="#676a6f"/>
+
+            <TextBlock Background="#f6e8db" Foreground="#FF676A6F" Margin="10,0,10,10" Padding="5">Rating : 4,5 of 5</TextBlock>
+            <TextBlock Background="#f6e8db" Foreground="#FF676A6F" Margin="10,0,10,10" Padding="5">Description: очень полезный предмет с множеством применений</TextBlock>
+            <ListBox Background="#f6e8db" Foreground="#FF676A6F" Margin="10,0,10,10" Padding="5" >Читать отзывы ></ListBox>
         </StackPanel>
     </Grid>
 </Window>
