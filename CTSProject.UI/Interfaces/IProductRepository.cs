@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 namespace CTSProject.UI.Interfaces
 {
      public interface IProductRepository : IRepository<Product>
-    {
-    }
+     {
+     }
 }
