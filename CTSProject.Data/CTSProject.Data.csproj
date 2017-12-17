@@ -48,10 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OnlineShopContext.cs" />
-    <Compile Include="Migrations\201712111913550_Initial.cs" />
-    <Compile Include="Migrations\201712111913550_Initial.Designer.cs">
-      <DependentUpon>201712111913550_Initial.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Cart.cs" />
     <Compile Include="Model\Category.cs" />
@@ -68,10 +64,16 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712111913550_Initial.resx">
-      <DependentUpon>201712111913550_Initial.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="Photo\1000.png" />
+    <Content Include="Photo\1001.png" />
+    <Content Include="Photo\2000.png" />
+    <Content Include="Photo\2001.png" />
+    <Content Include="Photo\2003.png" />
+    <Content Include="Photo\3000.png" />
+    <Content Include="Photo\3001.png" />
+    <Content Include="Photo\3002.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

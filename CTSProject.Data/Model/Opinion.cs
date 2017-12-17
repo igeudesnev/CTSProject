@@ -9,6 +9,7 @@ namespace CTSProject.Data.Model
     public class Opinion
     {
         public int Id { get; set; }
+        public Product Product { get; set; }
         public int Grade { get; set; }
         public string Autor { get; set; }
         public string Text { get; set; }

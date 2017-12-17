@@ -1,4 +1,4 @@
-﻿using CTSProject.Data.Model.ToDb;
+﻿using CTSProject.Data.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +15,8 @@ namespace CTSProject.Data.Model
         public int Count { get; set; }
         public string Name { get; set; }
         public MainPhoto MainPhoto { get; set; }
-        public string Desctiption { get; set; }
-        public int Rating { get; set; }
+        public string Description { get; set; }
+        public double Rating { get; set; }
         public int ReviewsCount { get; set; }
         public List<Opinion> Opinions { get; set; }
     }

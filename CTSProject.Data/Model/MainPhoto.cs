@@ -10,8 +10,6 @@ namespace CTSProject.Data.Model
     {
         public int Id { get; set; }
         public Product Product { get; set; }
-        public int Height { get; set; }
-        public int Width { get; set; }
         public string URL { get; set; }
     }
 }
