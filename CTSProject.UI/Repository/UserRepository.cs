@@ -18,7 +18,7 @@ namespace CTSProject.UI.Repository
 
         public bool IsUserExists(string username)
         {
-            return 
+            return false;
         }
     }
 }

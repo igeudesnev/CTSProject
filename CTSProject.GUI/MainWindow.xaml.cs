@@ -56,7 +56,7 @@ namespace CTSProject.GUI
                 LoginWindow.Show();
                 LoginWindow.Owner = this;
                 IsHitTestVisible = false;
-                products = _unit.Products.Read();
+                //products = _unit.Products.Read();
             }
         }
 
@@ -83,7 +83,7 @@ namespace CTSProject.GUI
         private void Category_Selected(object sender, RoutedEventArgs e)
         {
 
-            _unit.Products.CategorySort((Category)Categories.SelectedItem, products);
+            //_unit.Products.CategorySort((Category)Categories.SelectedItem, products);
             
         }
         

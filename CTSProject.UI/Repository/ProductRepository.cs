@@ -1,7 +1,5 @@
 ﻿using CTSProject.Data;
 using CTSProject.Data.Model;
-using CTSProject.Data.Model.ToDb;
-using CTSProject.Data.Model.ToShop;
 using CTSProject.UI.Interfaces;
 using System;
 using System.Collections.Generic;

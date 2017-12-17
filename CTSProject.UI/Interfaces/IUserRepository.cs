@@ -9,5 +9,6 @@ namespace CTSProject.UI.Interfaces
 {
     public interface IUserRepository: IRepository<User>
     {
+        //IEnumerable<User> IsUserExists(string username);
     }
 }

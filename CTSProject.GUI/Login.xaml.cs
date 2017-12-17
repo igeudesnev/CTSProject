@@ -41,7 +41,7 @@ namespace CTSProject.GUI
 
         private bool LoginExists(string text)
         {
-            
+            return false;
         }
     }
 }
