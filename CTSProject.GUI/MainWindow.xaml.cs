@@ -45,6 +45,7 @@ namespace CTSProject.GUI
                 {
                     if (window is Cart)
                         opened = true;
+                    MessageBox.Show("Корзина уже открыта!");
                 }
             }
             if (!opened)

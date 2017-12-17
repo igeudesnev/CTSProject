@@ -32,11 +32,11 @@
                 <ListBox Name="Categories" Margin="10,0,10,10" DisplayMemberPath="Name" SelectionChanged="Category_Selected"></ListBox>
             </StackPanel>
             <StackPanel DockPanel.Dock="Right">
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="10" Orientation="Horizontal">
                     <ComboBox Margin="10">Сортировка</ComboBox>
                     <TextBox Margin="10">Поиск</TextBox>
                 </StackPanel>
-                <ListBox x:Name="Items" ItemTemplate="{StaticResource ItemsTemplate}" Margin="10,0,10,10" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListBox x:Name="Items" ItemTemplate="{StaticResource ItemsTemplate}" Margin="10,0,10,10" Background="#1e402f" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel />
