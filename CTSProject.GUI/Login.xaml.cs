@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CTSProject.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace CTSProject.GUI
     /// </summary>
     public partial class Login : Window
     {
+        UnitOfWork _unit;
+
         public Login()
         {
             InitializeComponent();
@@ -38,19 +41,7 @@ namespace CTSProject.GUI
 
         private bool LoginExists(string text)
         {
-            using (var context = new OnlineShopContext())
-            {
-                var query = from r in context.User
-                            where r.Name == text
-                            select r.Name;
-
-                if (query == null)
-                {
-                    return false;
-                }
-                else
-                    return true;
-            }
+            
         }
     }
 }

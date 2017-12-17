@@ -9,5 +9,6 @@ namespace CTSProject.UI.Interfaces
 {
      public interface IProductRepository : IRepository<Product>
      {
+        IEnumerable<Product> CategorySort(Category filter, IEnumerable<Product> list);
      }
 }

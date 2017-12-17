@@ -13,6 +13,7 @@ namespace CTSProject.UI.Repository
     {
         protected OnlineShopContext _context;
 
+
         public void Add(T item)
         { _context.Set<T>().Add(item); }
 
@@ -24,6 +25,11 @@ namespace CTSProject.UI.Repository
         public IEnumerable<T> Read()
         {
             return _context.Set<T>();
+        }
+
+        public IEnumerable<T> Where(Expression<Func<T, bool>> predicate)
+        {
+            return _context.Set<T>().Where(predicate);
         }
     }
 }

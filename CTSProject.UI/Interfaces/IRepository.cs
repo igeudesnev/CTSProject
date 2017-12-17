@@ -12,5 +12,6 @@ namespace CTSProject.UI.Interfaces
         void Add(T item);//Добавляет инфу в БД
         void Remove(T item);
         IEnumerable<T> Read();
+        IEnumerable<T> Where(Expression<Func<T, bool>> predicate);
     }
 }

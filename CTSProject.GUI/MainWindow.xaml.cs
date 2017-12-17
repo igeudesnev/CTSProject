@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CTSProject.UI;
+using CTSProject.Data.Model;
 
 namespace CTSProject.GUI
 {
@@ -22,7 +23,7 @@ namespace CTSProject.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Product> products;
+        IEnumerable<Product> products;
         UnitOfWork _unit;
 
         public MainWindow()
@@ -49,11 +50,14 @@ namespace CTSProject.GUI
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            Login LoginWindow = new Login();
-            LoginWindow.Show();
-            LoginWindow.Owner = this;
-            IsHitTestVisible = false;
-            products = _unit.Products.Read();
+            using (_unit = new UnitOfWork())
+            {
+                Login LoginWindow = new Login();
+                LoginWindow.Show();
+                LoginWindow.Owner = this;
+                IsHitTestVisible = false;
+                products = _unit.Products.Read();
+            }
         }
 
         private void Cart_Click(object sender, RoutedEventArgs e)
@@ -77,7 +81,8 @@ namespace CTSProject.GUI
 
         private void Category_Selected(object sender, RoutedEventArgs e)
         {
-            CategorySort(Categories.SelectedItem);
+
+            _unit.Products.CategorySort((Category)Categories.SelectedItem, products);
             
         }
         
