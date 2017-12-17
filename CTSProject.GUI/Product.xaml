@@ -25,6 +25,7 @@
             <TextBlock Background="#f6e8db" Margin="10,0,10,10" Padding="5">Rating</TextBlock>
             <TextBlock Background="#f6e8db" Margin="10,0,10,10" Padding="5">Description</TextBlock>
             <ListBox Background="#f6e8db" Margin="10,0,10,10" Padding="5" >Reviews</ListBox>
+            <Button Content="В корзину" Margin="10,0,10,10" Click="AddToCart"/>
         </StackPanel>
     </Grid>
 </Window>
