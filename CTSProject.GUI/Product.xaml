@@ -6,18 +6,25 @@
         xmlns:local="clr-namespace:CTSProject.GUI"
         mc:Ignorable="d"
         Title="Product" Height="300" Width="450" ResizeMode="NoResize">
-    <Grid>
+    <Grid Background="#bfc7d2">
         <StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Image></Image>
-                <StackPanel Margin="20" HorizontalAlignment="Right">
+            <Grid Margin="10"  Background="#f6e8db">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" Margin="20" Source="cart.png" Height="70" Width="70" Stretch="Fill" ></Image>
+                <StackPanel Grid.Column="1" Grid.Row="0" Margin="20" HorizontalAlignment="Right">
                     <TextBlock>Название</TextBlock>
                     <TextBlock HorizontalAlignment="Right">Цена</TextBlock>
                 </StackPanel>
-            </StackPanel>
-            <TextBlock>Rating</TextBlock>
-            <TextBlock>Description</TextBlock>
-            <ListBox>Reviews</ListBox>
+            </Grid>
+            <TextBlock Background="#f6e8db" Margin="10,0,10,10" Padding="5">Rating</TextBlock>
+            <TextBlock Background="#f6e8db" Margin="10,0,10,10" Padding="5">Description</TextBlock>
+            <ListBox Background="#f6e8db" Margin="10,0,10,10" Padding="5" >Reviews</ListBox>
         </StackPanel>
     </Grid>
 </Window>

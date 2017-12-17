@@ -23,5 +23,10 @@ namespace CTSProject.GUI
         {
             InitializeComponent();
         }
+
+        private void OrderEverything(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Спасибо за ваш заказ! Сейчас с вами свяжется наш менеджер для уточнения деталей.");
+        }
     }
 }

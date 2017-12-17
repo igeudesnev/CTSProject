@@ -5,17 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTSProject.GUI"
         mc:Ignorable="d"
-        Title="Cart" Height="400" Width="600">
-    <Grid>
-        <DockPanel Margin="20" LastChildFill="True">
-            <TextBlock DockPanel.Dock="Top" Margin="10">
-                Ваша корзина:
-            </TextBlock>
-            <StackPanel CanVerticallyScroll="True" DockPanel.Dock="Top">
-                <ListBox Name="CartItems">a</ListBox>
+         Title="CTS" Height="600" Width="900" ResizeMode="NoResize" Loaded="MainWindow_Loaded" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <DataTemplate x:Key="ItemsTemplate">
+            <DockPanel Margin="5" >
+                <Image DockPanel.Dock="Left" Width="60" Height="60"/>
+                <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Name="Title" HorizontalAlignment="Left" />
+                    <TextBlock Name="Price" HorizontalAlignment="Right" />
+                </StackPanel>
+            </DockPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid Background="#bfc7d2">
+        <DockPanel LastChildFill="True">
+            <Grid DockPanel.Dock="Top" Background="#9e8767">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Height="50">
+                    <TextBlock Margin="10" VerticalAlignment="Center" TextAlignment="Center">
+                        Здравствуйте!
+                    </TextBlock>
+                    <Button Click="Cart_Click" HorizontalContentAlignment="Center" BorderThickness="0" Background="#9e8767" Height="Auto" Width="Auto" Margin="10" Padding="1" VerticalContentAlignment="Center">
+                        <Image Source="cart.png" Width="25" Height="25" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <StackPanel Width="180" DockPanel.Dock="Left" Margin="10 10 0 10" Background="#f6e8db">
+                <TextBlock Height="Auto" Margin="10" Foreground="#FF676A6F" FontSize="20" >Категории</TextBlock>
+                <ListBox Name="Categories" Margin="10,0,10,10" DisplayMemberPath="Name" SelectionChanged="Category_Selected"></ListBox>
             </StackPanel>
-            <TextBlock x:Name="Sum" Text="Сумма: {0} рублей" DockPanel.Dock="Bottom" Width="Auto" Height="50" Margin="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextAlignment="Center">
-            </TextBlock>
+            <StackPanel DockPanel.Dock="Right" Margin="10">
+                <Grid Margin="0 0 0 10"  Background="#f6e8db">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <ComboBox Grid.Column="0" Grid.Row="0" Margin="10" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch">
+                        <ComboBoxItem IsSelected="True">Сортировка</ComboBoxItem>
+                    </ComboBox>
+                    <Grid Grid.Column="1" Grid.Row="0" Visibility="Hidden"/>
+                    <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Width="Auto">
+                        <TextBox Name="SearchBox" Margin="10" Width="150" Padding="5"></TextBox>
+                        <Button Margin="0,10,10,10" Padding="5" Click="Search_Click">Искать</Button>
+                    </StackPanel>
+                </Grid>
+                <ListBox x:Name="Items" ItemTemplate="{StaticResource ItemsTemplate}"  Background="#f6e8db" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </StackPanel>
         </DockPanel>
     </Grid>
 </Window>
