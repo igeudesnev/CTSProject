@@ -23,5 +23,11 @@ namespace CTSProject.GUI
         {
             InitializeComponent();
         }
+
+        
+        private void AddToCart(object sender, RoutedEventArgs e)
+        {
+            //Adding To Cart
+        }
     }
 }

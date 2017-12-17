@@ -20,6 +20,7 @@
                 <StackPanel Grid.Column="1" Grid.Row="0" Margin="20" HorizontalAlignment="Right">
                     <TextBlock>Название</TextBlock>
                     <TextBlock HorizontalAlignment="Right">Цена</TextBlock>
+                    <Button Click="AddToCart"/>
                 </StackPanel>
             </Grid>
             <TextBlock Background="#f6e8db" Margin="10,0,10,10" Padding="5">Rating</TextBlock>

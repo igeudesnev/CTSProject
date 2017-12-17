@@ -20,13 +20,13 @@
     <Grid Background="#bfc7d2">
         <DockPanel LastChildFill="True">
             <Grid DockPanel.Dock="Top" Background="#9e8767">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Height="50">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Height="Auto">
                     <TextBlock Margin="10" VerticalAlignment="Center" TextAlignment="Center">
                         Здарова
                     </TextBlock>
-                    <Image Source="Images/cart.png" Width="30" Height="30" />
-                    <Button Click="Cart_Click" HorizontalContentAlignment="Center" Background="#f6e8db" Padding="5,1" Height="Auto" Width="Auto" Margin="10" Foreground="#FF676A6F" FontSize="18" VerticalContentAlignment="Center">
-                        Корзина
+
+                    <Button Click="Cart_Click" HorizontalContentAlignment="Center" BorderThickness="0" Background="#9e8767" Height="Auto" Width="Auto" Margin="10,5" Foreground="#FF676A6F" VerticalContentAlignment="Center">
+                        <Image Source="cart.png" Width="30" Height="30" Stretch="UniformToFill"/>
                     </Button>
                 </StackPanel>
             </Grid>
