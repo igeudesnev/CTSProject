@@ -60,6 +60,10 @@ namespace CTSProject.GUI
         {
             //Category Selection
         }
-        
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            //Активация поиска
+        }
     }
 }
