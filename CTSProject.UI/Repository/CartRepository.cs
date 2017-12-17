@@ -1,5 +1,5 @@
 ﻿using CTSProject.Data;
-using CTSProject.Data.Model.ToDb;
+using CTSProject.Data.Model;
 using CTSProject.UI.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CTSProject.UI.Repository
 {
-    class CartRepository: Repository<Cart>, ICartRepository<Cart, ProductToDb>
+    class CartRepository: Repository<Cart>, ICartRepository<Cart, Product>
     {
 
         public CartRepository(OnlineShopContext context)
@@ -17,12 +17,12 @@ namespace CTSProject.UI.Repository
             _context = context;
         }
 
-        public void AddProduct(Cart cart, ProductToDb product)
+        public void AddProduct(Cart cart, Product product)
         {
             cart.Products.Add(product);
         }
 
-        public void RemoveProduct(Cart cart, ProductToDb product)
+        public void RemoveProduct(Cart cart, Product product)
         {
             cart.Products.Remove(product);
         }

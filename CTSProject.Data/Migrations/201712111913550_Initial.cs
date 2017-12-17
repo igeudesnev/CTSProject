@@ -18,7 +18,7 @@ namespace CTSProject.Data.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.ProductToDbs",
+                "dbo.Products",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -55,13 +55,13 @@ namespace CTSProject.Data.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.ProductToDbs", "Cart_Id", "dbo.Carts");
-            DropForeignKey("dbo.ProductToDbs", "Category_Id", "dbo.Categories");
-            DropIndex("dbo.ProductToDbs", new[] { "Cart_Id" });
-            DropIndex("dbo.ProductToDbs", new[] { "Category_Id" });
+            DropForeignKey("dbo.Products", "Cart_Id", "dbo.Carts");
+            DropForeignKey("dbo.Products", "Category_Id", "dbo.Categories");
+            DropIndex("dbo.Products", new[] { "Cart_Id" });
+            DropIndex("dbo.Products", new[] { "Category_Id" });
             DropTable("dbo.Users");
             DropTable("dbo.Categories");
-            DropTable("dbo.ProductToDbs");
+            DropTable("dbo.Products");
             DropTable("dbo.Carts");
         }
     }

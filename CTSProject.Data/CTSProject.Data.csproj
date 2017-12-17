@@ -53,13 +53,12 @@
       <DependentUpon>201712111913550_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model\ToDb\Cart.cs" />
-    <Compile Include="Model\ToDb\Category.cs" />
-    <Compile Include="Model\ToDb\ProductToDb.cs" />
-    <Compile Include="Model\ToDb\User.cs" />
-    <Compile Include="Model\ToShop\MainPhoto.cs" />
-    <Compile Include="Model\ToShop\Opinion.cs" />
-    <Compile Include="Model\ToShop\ProductToShop.cs" />
+    <Compile Include="Model\Cart.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\MainPhoto.cs" />
+    <Compile Include="Model\Opinion.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

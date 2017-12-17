@@ -5,10 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CTSProject.Data.Model.ToShop
+namespace CTSProject.Data.Model
 {
-    public class ProductToShop: ProductToDb
+    public class Product
     {
+        public int Id { get; set; }
+        public Category Category { get; set; }
+        public int Price { get; set; }
+        public int Count { get; set; }
         public string Name { get; set; }
         public MainPhoto MainPhoto { get; set; }
         public string Desctiption { get; set; }

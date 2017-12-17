@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CTSProject.Data.Model.ToShop
+namespace CTSProject.Data.Model
 {
     public class Opinion
     {
