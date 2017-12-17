@@ -24,13 +24,14 @@
                     <TextBlock Margin="10" VerticalAlignment="Center" TextAlignment="Center">
                         Здарова
                     </TextBlock>
-                    <Button Click="Cart_Click" HorizontalContentAlignment="Center" Background="#9e8767" Height="30" Width="30" Margin="10">
+                    <Image Source="Images/cart.png" Width="30" Height="30" />
+                    <Button Click="Cart_Click" HorizontalContentAlignment="Center" Background="#f6e8db" Padding="5,1" Height="Auto" Width="Auto" Margin="10" Foreground="#FF676A6F" FontSize="18" VerticalContentAlignment="Center">
                         Корзина
                     </Button>
                 </StackPanel>
             </Grid>
             <StackPanel Width="180" DockPanel.Dock="Left" Margin="10 10 0 10" Background="#f6e8db">
-                <TextBlock Height="Auto" Margin="10">Категории</TextBlock>
+                <TextBlock Height="Auto" Margin="10" Foreground="#FF676A6F" FontSize="20" >Категории</TextBlock>
                 <ListBox Name="Categories" Margin="10,0,10,10" DisplayMemberPath="Name" SelectionChanged="Category_Selected"></ListBox>
             </StackPanel>
             <StackPanel DockPanel.Dock="Right" Margin="10">

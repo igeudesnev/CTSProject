@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Cart" Height="400" Width="600" WindowStartupLocation="CenterOwner">
     <Grid Background="#bfc7d2">
-        <DockPanel Margin="20" LastChildFill="True">
+        <DockPanel Margin="10" LastChildFill="True">
             <Grid DockPanel.Dock="Top" Background="#f6e8db">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
@@ -15,7 +15,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Grid.Row="0" Margin="10">
+                <TextBlock Grid.Column="0" Grid.Row="0" Margin="10" Foreground="#FF676A6F" FontSize="20">
                     Ваша корзина:
                 </TextBlock>
             </Grid>
@@ -29,9 +29,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Grid.Row="0" x:Name="Sum" Margin="20" HorizontalAlignment="Right" VerticalAlignment="Center" TextAlignment="Center">
-                    Сумма
-                </TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="0" Foreground="#FF676A6F" TextAlignment="Right" VerticalAlignment="Center" Padding="0,0,10,0" FontSize="20" Text="Сумма: {0} рублей" />
             </Grid>
         </DockPanel>
     </Grid>
