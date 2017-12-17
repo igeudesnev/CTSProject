@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTSProject.GUI"
         mc:Ignorable="d"
+        Icon="cart.ico"
         Title="Login" Height="300" Width="450" ResizeMode="NoResize"
         Topmost="True" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <StackPanel HorizontalAlignment="Center" Margin="50" VerticalAlignment="Center">
-            <TextBlock Margin="10">Enter your unique login:</TextBlock>
-            <TextBox Name="LoginBox" Margin="10"> </TextBox>
-            <Button Margin="10" Click="Login_Click" >Confirm</Button>
-        </StackPanel>
-    </Grid>
+  <Grid Background="#bfc7d2">
+    <StackPanel HorizontalAlignment="Center" Margin="50" VerticalAlignment="Center" Background="#f6e8db">
+      <TextBlock Margin="10" FontSize="20" Foreground="#676a6f">Enter your unique login:</TextBlock>
+      <TextBox Name="LoginBox" Margin="10" FontSize="16"> </TextBox>
+      <Button Margin="10" Click="Login_Click" Background="#d9be98" FontSize="16" Foreground="#676a6f">Confirm</Button>
+    </StackPanel>
+  </Grid>
 </Window>

@@ -29,19 +29,17 @@ namespace CTSProject.GUI
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            if(LoginExists(LoginBox.Text))
+            if (LoginExists(LoginBox.Text))
             {
                 MessageBox.Show("This username is allready exists. /nPlease try another one.", "Wrong username");
             }
-            //if (LoginBox.Text = УНИКАЛЬНОСТЬ ПОИСКОМ ПО БД)
-            // ЗАПИСАТЬ ЛОГИН В БД
             Close();
             Owner.IsHitTestVisible = true;
         }
 
         private bool LoginExists(string text)
         {
-            
+            return false;
         }
     }
 }
