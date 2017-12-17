@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CTSProject.Data.Model.ToDb;
+using CTSProject.Data.Model;
 
 namespace CTSProject.UI.Interfaces
 {
@@ -11,7 +11,7 @@ namespace CTSProject.UI.Interfaces
     {
         //T1- cart
         //T2 - product in cart
-        void AddProduct(T1 item1, T2 item2);
-        void RemoveProduct(T1 item1, T2 item2);
+        void AddProduct(Cart item1, T2 item2);
+        void RemoveProduct(Cart item1, T2 item2);
     }
 }

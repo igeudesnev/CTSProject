@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CTSProject.Data.Model.ToDb
+namespace CTSProject.Data.Model
 {
     public class Category
     {

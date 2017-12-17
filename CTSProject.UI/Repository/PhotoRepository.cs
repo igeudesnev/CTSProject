@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace CTSProject.UI.Repository
 {
-    class UserRepository: Repository<User>, IUserRepository
+    class PhotoRepository: Repository<MainPhoto>, IPhotoRepository
     {
-        public UserRepository(OnlineShopContext context)
+        public PhotoRepository(OnlineShopContext context)
         {
             _context = context;
         }

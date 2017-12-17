@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CTSProject.UI.Interfaces
 {
-    public interface IUserRepository: IRepository<User>
+    public interface IPhotoRepository: IRepository<MainPhoto>
     {
     }
 }

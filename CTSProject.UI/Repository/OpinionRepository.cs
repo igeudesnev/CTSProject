@@ -1,17 +1,17 @@
-﻿using CTSProject.Data;
-using CTSProject.Data.Model;
-using CTSProject.UI.Interfaces;
+﻿using CTSProject.Data.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CTSProject.UI.Interfaces;
+using CTSProject.Data;
 
 namespace CTSProject.UI.Repository
 {
-    class UserRepository: Repository<User>, IUserRepository
+    class OpinionRepository: Repository<Opinion>, IOpinionRepository
     {
-        public UserRepository(OnlineShopContext context)
+        public OpinionRepository(OnlineShopContext context)
         {
             _context = context;
         }

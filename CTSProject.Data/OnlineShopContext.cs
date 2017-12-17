@@ -1,4 +1,4 @@
-﻿using CTSProject.Data.Model.ToDb;
+﻿using CTSProject.Data.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -12,8 +12,10 @@ namespace CTSProject.Data
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Cart> Carts { get; set; }
-        public DbSet<ProductToDb> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Opinion> Opninions { get; set; }
+        public DbSet<MainPhoto> MainPhotos { get; set; }
 
         public OnlineShopContext()
             : base("OnlineShopDataBase")
