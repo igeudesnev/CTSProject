@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Cart" Height="400" Width="600" WindowStartupLocation="CenterOwner">
     <Grid Background="#bfc7d2">
-        <DockPanel Margin="10" LastChildFill="True">
+        <DockPanel Margin="10">
             <Grid DockPanel.Dock="Top" Background="#f6e8db">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
@@ -22,6 +22,7 @@
             <StackPanel CanVerticallyScroll="True" DockPanel.Dock="Top" Background="#f6e8db" Margin="0 10 0 10" VerticalAlignment="Center">
                 <ListBox Name="CartItems" Margin="10">a</ListBox>
             </StackPanel>
+            <Button Content="Заказать всё" DockPanel.Dock="Bottom" Click="OrderEverything" Background="#9e8767" VerticalAlignment="Bottom" Foreground="#d9be98" HorizontalAlignment="Right" Margin="0,10,0,0" Padding="10,2" FontSize="20" BorderThickness="0" />
             <Grid DockPanel.Dock="Bottom" Background="#f6e8db" Height="36" VerticalAlignment="Bottom">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
