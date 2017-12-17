@@ -14,7 +14,7 @@
             <StackPanel CanVerticallyScroll="True" DockPanel.Dock="Top">
                 <ListBox Name="CartItems">a</ListBox>
             </StackPanel>
-            <TextBlock x:Name="Sum" Text="Сумма: {0} рублей" DockPanel.Dock="Bottom" Width="Auto" Height="50" Margin="20" HorizontalAlignment="Right" VerticalAlignment="Center" TextAlignment="Center">
+            <TextBlock x:Name="Sum" Text="Сумма: {0} рублей" DockPanel.Dock="Bottom" Width="Auto" Height="50" Margin="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextAlignment="Center">
             </TextBlock>
         </DockPanel>
     </Grid>

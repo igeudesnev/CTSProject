@@ -26,10 +26,29 @@ namespace CTSProject.GUI
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+            if(LoginExists(LoginBox.Text))
+            {
+
+            }
             //if (LoginBox.Text = УНИКАЛЬНОСТЬ ПОИСКОМ ПО БД)
             // ЗАПИСАТЬ ЛОГИН В БД
             Close();
             Owner.IsHitTestVisible = true;
+        }
+
+        private bool LoginExists(string text)
+        {
+            using(var context = new OnlineShopContext())
+            {
+                var query = from r in context.User
+                            where r.Name == text
+                            select r.Name;
+
+                if(query == null)
+                {
+
+                }
+            }
         }
     }
 }
