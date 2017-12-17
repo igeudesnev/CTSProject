@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTSProject.GUI"
         mc:Ignorable="d"
+        Icon="cart.ico"
         Title="CTS" Height="600" Width="900" ResizeMode="NoResize" Loaded="MainWindow_Loaded" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <DataTemplate x:Key="ItemsTemplate">

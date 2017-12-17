@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CTSProject.GUI"
         mc:Ignorable="d"
+        Icon="cart.ico"
         Title="Product" Height="300" Width="450" ResizeMode="NoResize">
     <Grid Background="#bfc7d2">
         <StackPanel>
