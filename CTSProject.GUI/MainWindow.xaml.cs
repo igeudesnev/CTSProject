@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CTSProject.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CTSProject.UI;
 
 namespace CTSProject.GUI
 {
@@ -20,12 +22,29 @@ namespace CTSProject.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Product> products;
+        UnitOfWork _unit;
+
         public MainWindow()
         {
             InitializeComponent();
-        
+
+            CategoriesToListbox();
+            ProductsToListbox();
+
             //Преобразовать название категорий, чтобы выводить их в лист
             //Categories.ItemSourse = Имя Листа С Категориями, где названия в графе Name
+        }
+
+        private void ProductsToListbox()
+        {
+            Items.ItemsSource = products;
+            throw new NotImplementedException();
+        }
+
+        private void CategoriesToListbox()
+        {
+            throw new NotImplementedException();
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -34,6 +53,7 @@ namespace CTSProject.GUI
             LoginWindow.Show();
             LoginWindow.Owner = this;
             IsHitTestVisible = false;
+            products = _unit.Products.Read();
         }
 
         private void Cart_Click(object sender, RoutedEventArgs e)
@@ -57,7 +77,8 @@ namespace CTSProject.GUI
 
         private void Category_Selected(object sender, RoutedEventArgs e)
         {
-            //Category Selection
+            CategorySort(Categories.SelectedItem);
+            
         }
         
     }

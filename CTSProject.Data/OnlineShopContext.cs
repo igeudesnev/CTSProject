@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CTSProject.Data
 {
-    public class OnlineShopContext: DbContext
+    public class OnlineShopContext: DbContext, IDisposable
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Cart> Carts { get; set; }

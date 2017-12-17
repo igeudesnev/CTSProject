@@ -114,5 +114,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CTSProject.Data\CTSProject.Data.csproj">
+      <Project>{2108AB71-5172-4484-9C38-4A6415BC7299}</Project>
+      <Name>CTSProject.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CTSProject.UI\CTSProject.UI.csproj">
+      <Project>{f1e61575-f8df-4cf9-973a-89f011f88dd9}</Project>
+      <Name>CTSProject.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

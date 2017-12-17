@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CTSProject.UI.Repository
 {
-    class ProductRepository : Repository<ProductToDb>, IProductRepository<ProductToDb, ProductToShop>
+    class ProductRepository : Repository<Product>, IProductRepository<ProductToDb, ProductToShop>
     {
         public ProductRepository(OnlineShopContext context)
         {
@@ -20,6 +20,11 @@ namespace CTSProject.UI.Repository
         public IEnumerable<ProductToShop> ReadAPI()
         {
             throw new NotImplementedException();
+        }
+
+        public List<Product> CategorySort(Category filter)
+        {
+            return _context.Products.Where(item => item.Category = filter);
         }
     }
 }

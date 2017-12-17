@@ -28,7 +28,7 @@ namespace CTSProject.GUI
         {
             if(LoginExists(LoginBox.Text))
             {
-
+                MessageBox.Show("This username is allready exists. /nPlease try another one.", "Wrong username");
             }
             //if (LoginBox.Text = УНИКАЛЬНОСТЬ ПОИСКОМ ПО БД)
             // ЗАПИСАТЬ ЛОГИН В БД
@@ -38,16 +38,18 @@ namespace CTSProject.GUI
 
         private bool LoginExists(string text)
         {
-            using(var context = new OnlineShopContext())
+            using (var context = new OnlineShopContext())
             {
                 var query = from r in context.User
                             where r.Name == text
                             select r.Name;
 
-                if(query == null)
+                if (query == null)
                 {
-
+                    return false;
                 }
+                else
+                    return true;
             }
         }
     }

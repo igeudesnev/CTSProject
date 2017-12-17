@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CTSProject.UI
 {
-    class UnitOfWork:IDisposable
+    public class UnitOfWork:IDisposable
     {
         OnlineShopContext _context = new OnlineShopContext();
 

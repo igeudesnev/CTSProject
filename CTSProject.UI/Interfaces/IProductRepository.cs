@@ -11,5 +11,7 @@ namespace CTSProject.UI.Interfaces
         //T1 - product DB
         //T2 - product Shop
         IEnumerable<T2> ReadAPI();
+
+        List<Product> CategorySort();
     }
 }
