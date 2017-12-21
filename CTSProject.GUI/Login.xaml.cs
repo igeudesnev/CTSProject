@@ -47,7 +47,10 @@ namespace CTSProject.GUI
                 Close();
                 Owner.IsHitTestVisible = true;
             }
-            catch { MessageBox.Show("Data doesn`t exist!");
+            catch
+            {
+                //MessageBox.Show("Data doesn`t exist!");
+                Close();
                 Owner.IsHitTestVisible = true; ;
             }
         }
