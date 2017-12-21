@@ -1,4 +1,5 @@
-﻿using CTSProject.UI;
+﻿using CTSProject.Data.Model;
+using CTSProject.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,19 +28,29 @@ namespace CTSProject.GUI
             InitializeComponent();
         }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
+        private void ProductWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            if (LoginExists(LoginBox.Text))
+            using (_unit = new UnitOfWork())
             {
-                MessageBox.Show("This username is allready exists. /nPlease try another one.", "Wrong username");
+
             }
-            Close();
-            Owner.IsHitTestVisible = true;
         }
 
-        private bool LoginExists(string text)
+        private void Login_Click(object sender, RoutedEventArgs e)
         {
-            return false;
+            try
+            {
+                if (_unit.Users.IsUserExists(LoginBox.Text))
+                {
+                    MessageBox.Show("This username is allready exists. /nPlease try another one.", "Wrong username");
+                }
+                Close();
+                Owner.IsHitTestVisible = true;
+            }
+            catch { MessageBox.Show("Data doesn`t exist!");
+                Owner.IsHitTestVisible = true; ;
+            }
         }
+
     }
 }

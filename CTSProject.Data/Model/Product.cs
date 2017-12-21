@@ -14,10 +14,8 @@ namespace CTSProject.Data.Model
         public int Price { get; set; }
         public int Count { get; set; }
         public string Name { get; set; }
-        public MainPhoto MainPhoto { get; set; }
         public string Description { get; set; }
         public double Rating { get; set; }
         public int ReviewsCount { get; set; }
-        public List<Opinion> Opinions { get; set; }
     }
 }

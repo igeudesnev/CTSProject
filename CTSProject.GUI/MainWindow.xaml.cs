@@ -23,8 +23,9 @@ namespace CTSProject.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        IEnumerable<Product> products;
+        IEnumerable<Product> _products;
         UnitOfWork _unit;
+        IEnumerable<Category> _categories;
 
         public MainWindow()
         {
@@ -39,13 +40,12 @@ namespace CTSProject.GUI
 
         private void ProductsToListbox()
         {
-            Items.ItemsSource = products;
-            throw new NotImplementedException();
+            Items.ItemsSource = _products;
         }
 
         private void CategoriesToListbox()
         {
-            throw new NotImplementedException();
+            Items.ItemsSource = _categories;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -56,7 +56,8 @@ namespace CTSProject.GUI
                 LoginWindow.Show();
                 LoginWindow.Owner = this;
                 IsHitTestVisible = false;
-                products = _unit.Products.Read();
+                _products = _unit.Products.Read();
+                _categories = _unit.Categories.Read();
             }
         }
 
@@ -82,9 +83,13 @@ namespace CTSProject.GUI
         private void Category_Selected(object sender, RoutedEventArgs e)
         {
 
-            _unit.Products.CategorySort((Category)Categories.SelectedItem, products);
+            _unit.Products.CategorySort((Category)Categories.SelectedItem, _products);
             
         }
-        
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

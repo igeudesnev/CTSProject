@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CTSProject.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,14 +18,21 @@ namespace CTSProject.GUI
     /// <summary>
     /// Логика взаимодействия для Product.xaml
     /// </summary>
-    public partial class Product : Window
+    public partial class ProductWindow : Window
     {
-        public Product()
+        UnitOfWork _unit;
+        public ProductWindow()
         {
             InitializeComponent();
         }
 
-        private void AddToCart(object sender, RoutedEventArgs e)
+        private void ProductWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (_unit = new UnitOfWork())
+            { }
+        }
+
+                private void AddToCart(object sender, RoutedEventArgs e)
         {
 
         }
